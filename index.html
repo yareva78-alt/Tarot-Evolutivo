@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oraculo Evolutivo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="reading-panel" aria-labelledby="app-title">
+        <div class="brand-row">
+          <div class="sigil" aria-hidden="true">
+            <span></span>
+          </div>
+          <div>
+            <p class="eyebrow">Tarot evolutivo</p>
+            <h1 id="app-title">Oraculo de Integracion</h1>
+          </div>
+        </div>
+
+        <form id="reading-form" class="control-surface">
+          <label class="field">
+            <span>Intencion</span>
+            <textarea
+              id="intention"
+              rows="4"
+              maxlength="180"
+              placeholder="Escribe una situacion, pregunta o energia que quieras comprender."
+            >Hola, quiero saber acerca de un proyecto en conjunto</textarea>
+          </label>
+
+          <fieldset class="spread-picker">
+            <legend>Tirada</legend>
+            <label>
+              <input type="radio" name="spread" value="one" />
+              <span>Una carta</span>
+            </label>
+            <label>
+              <input type="radio" name="spread" value="three" checked />
+              <span>Camino de 3</span>
+            </label>
+            <label>
+              <input type="radio" name="spread" value="mirror" />
+              <span>Espejo</span>
+            </label>
+          </fieldset>
+
+          <div class="focus-grid">
+            <label class="field compact">
+              <span>Area</span>
+              <select id="area">
+                <option value="proposito">Proposito</option>
+                <option value="amor">Vinculos</option>
+                <option value="trabajo">Trabajo creativo</option>
+                <option value="sombra">Sombra personal</option>
+                <option value="cambio">Transicion</option>
+              </select>
+            </label>
+
+            <label class="field compact">
+              <span>Tono</span>
+              <select id="tone">
+                <option value="suave">Suave</option>
+                <option value="directo">Directo</option>
+                <option value="profundo">Profundo</option>
+              </select>
+            </label>
+          </div>
+
+          <button class="primary-action" type="submit">
+            <span class="button-icon" aria-hidden="true">✦</span>
+            Revelar lectura
+          </button>
+        </form>
+
+        <div class="ritual-note">
+          <strong>Enfoque:</strong>
+          <span>no predice un destino fijo; traduce simbolos en decisiones conscientes.</span>
+        </div>
+      </section>
+
+      <section class="deck-stage" aria-live="polite">
+        <div class="stage-top">
+          <div>
+            <p class="eyebrow">Lectura actual</p>
+            <h2 id="spread-title">Pulsa revelar para abrir el mazo</h2>
+          </div>
+          <button id="clear-reading" class="ghost-action" type="button">Limpiar</button>
+        </div>
+
+        <div id="cards" class="cards empty">
+          <article class="card-back" aria-hidden="true">
+            <div class="card-orbit"></div>
+            <div class="card-moon"></div>
+            <div class="card-line"></div>
+          </article>
+          <article class="card-back ghost-card" aria-hidden="true">
+            <div class="card-orbit"></div>
+            <div class="card-moon"></div>
+            <div class="card-line"></div>
+          </article>
+          <article class="card-back ghost-card" aria-hidden="true">
+            <div class="card-orbit"></div>
+            <div class="card-moon"></div>
+            <div class="card-line"></div>
+          </article>
+        </div>
+
+        <div id="interpretation" class="interpretation empty-state">
+          <p>
+            Formula la intencion con honestidad. La lectura aparecera aqui con simbolo,
+            sombra, aprendizaje y una practica concreta para integrar.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+PUBLICAR LA APP EN GITHUB PAGES
+
+Archivos que debes subir al repositorio:
+- index.html
+- styles.css
+- app.js
+- .nojekyll
+
+PASOS
+
+1. Entra a GitHub:
+   https://github.com
+
+2. Crea un repositorio nuevo:
+   - Boton New repository
+   - Nombre sugerido: tarot-evolutivo
+   - Public
+   - Create repository
+
+3. Sube los archivos:
+   - En el repositorio, pulsa Add file
+   - Pulsa Upload files
+   - Arrastra estos archivos desde:
+     C:\Users\yarev\OneDrive\Documents\New project
+   - Sube: index.html, styles.css, app.js y .nojekyll
+   - Pulsa Commit changes
+
+4. Activa GitHub Pages:
+   - Ve a Settings
+   - En el menu izquierdo, entra a Pages
+   - En Branch selecciona main
+   - En carpeta selecciona /root
+   - Pulsa Save
+
+5. Espera 1 o 2 minutos.
+   GitHub te mostrara una URL parecida a:
+   https://TU-USUARIO.github.io/tarot-evolutivo/
+
+IMPORTANTE
+El archivo principal debe llamarse exactamente:
+index.html
+
+Si lo cambias de nombre, GitHub Pages no abrira la app automaticamente.
